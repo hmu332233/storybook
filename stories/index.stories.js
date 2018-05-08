@@ -5,6 +5,9 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
 import { Button, Welcome } from '@storybook/react/demo';
+import { Tabs } from '../src/components';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
@@ -17,3 +20,8 @@ storiesOf('Button', module)
       </span>
     </Button>
   ));
+
+
+storiesOf('Tabs', module).add('basic', () => {
+  return (<Tabs />);
+});

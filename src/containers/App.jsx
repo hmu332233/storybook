@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../styles/styles.scss';
 import { connect } from 'react-redux';
-import { CountView } from '../components';
+import { CountView, Tabs } from '../components';
 import { increment } from '../actions';
 
 class App extends React.Component {
@@ -20,6 +20,7 @@ class App extends React.Component {
       <div>
         <div className={styles.blue}>Hello world!</div>
         <CountView count={this.props.count} />
+        <Tabs />
       </div>
     );
   }
