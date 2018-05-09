@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../styles/styles.scss';
 import { connect } from 'react-redux';
-import { CountView, Tabs } from '../components';
+import { CountView, Tabs, RowList } from '../components';
 import { increment } from '../actions';
 
 class App extends React.Component {
@@ -21,6 +21,11 @@ class App extends React.Component {
         <div className={styles.blue}>Hello world!</div>
         <CountView count={this.props.count} />
         <Tabs />
+        <RowList 
+          items={Array(8).fill(<div style={{width: '100px'}}>test</div>)}
+          rowInterval={1.5}
+          columnInterval={1.5}
+        />
       </div>
     );
   }
